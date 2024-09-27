@@ -8,6 +8,14 @@ public class Video extends RegistrazioneAudio implements Play {
 
     }
 
+    public int getLuminosita() {
+        return luminosita;
+    }
+
+    public void setLuminosita(int luminosita) {
+        this.luminosita= luminosita;
+    }
+
     public void aumentaLuminosita() {
         luminosita++;
 

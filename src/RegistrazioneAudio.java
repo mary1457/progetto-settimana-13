@@ -11,13 +11,23 @@ public class RegistrazioneAudio extends ElementoMultimediale implements Play {
 
     }
 
+
     public int getDurata() {
         return durata;
+    }
+
+    public void setDurata(int durata) {
+        this.durata= durata;
     }
 
     public int getVolume() {
         return volume;
     }
+
+    public void setVolume(int volume) {
+        this.volume= volume;
+    }
+
 
     public boolean controllo() {
 
