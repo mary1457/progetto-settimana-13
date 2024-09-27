@@ -1,12 +1,12 @@
-public class RegistrazioneAudio extends ElementoMultimediale implements Play{
+public class RegistrazioneAudio extends ElementoMultimediale implements Play {
 
     private int durata;
     private int volume;
 
-    public RegistrazioneAudio(String titolo,int durata, int volume) {
+    public RegistrazioneAudio(String titolo, int durata, int volume) {
         super(titolo);
-        this.durata=durata;
-        this.volume=volume;
+        this.durata = durata;
+        this.volume = volume;
 
 
     }
@@ -21,33 +21,36 @@ public class RegistrazioneAudio extends ElementoMultimediale implements Play{
 
     public boolean controllo() {
 
-       if(this.durata>0 ){
-           return true;
-       }
-       else {return false;}
+        if (this.durata > 0) {
+            return true;
+        } else {
+            return false;
+        }
     }
 
     public void alzaVolume() {
-volume++;
+        volume++;
 
-        }
+    }
 
 
     public void abbassaVolume() {
-if(this.volume>0){
-        volume--;}
+        if (this.volume > 0) {
+            volume--;
+        }
     }
 
 
     @Override
     public void play() {
-        if(controllo()) {
-            for(int i =0;i<durata;i++){
-                System.out.println(getTitolo()+"!".repeat(volume));
+        if (controllo()) {
+            for (int i = 0; i < durata; i++) {
+                System.out.println(getTitolo() + "!".repeat(volume));
             }
 
+        } else {
+            System.out.println("Registrazione audio non riproducibile");
         }
-        else { System.out.println("Registrazione audio non riproducibile");}
     }
 
     @Override
